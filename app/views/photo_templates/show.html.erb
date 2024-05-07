@@ -17,12 +17,12 @@
   <dd></dd>
 
   <dd>
-    <form action="/update_photo/777" method="post">
+    <form action="/update_photo/<%= @the_photo.id%>" method="post">
       <label for="browser_image">Image</label>
-      <input id="browser_image" type="text" name="input_image" placeholder="Enter a URL for the image..." value=https://robohash.org/dolorehicincidunt.png?size=300x300&amp;set=set1>
+      <input id="browser_image" type="text" name="query_image" placeholder="Enter a URL for the image..." value="<%= @the_photo.image %>">
 
       <label for="browser_caption">Caption</label>
-      <textarea id="browser_caption" name="input_caption" placeholder="Enter a caption for the photo...">Once you’ve accepted your flaws, no one can use them against you.</textarea>
+      <textarea id="browser_caption" name="query_caption" placeholder="Enter a caption for the photo..."><%= @the_photo.caption %></textarea>
 
       <button>Update photo</button>
     </form>
